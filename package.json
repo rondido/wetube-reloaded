@@ -1,0 +1,16 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "The Best Wetch videos",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rondido/wetube-reloaded.git"
+  },
+  "author": "Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rondido/wetube-reloaded/issues"
+  },
+  "homepage": "https://github.com/rondido/wetube-reloaded#readme"
+}
