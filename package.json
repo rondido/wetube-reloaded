@@ -17,5 +17,9 @@
   "homepage": "https://github.com/rondido/wetube-reloaded#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0"
   }
 }
