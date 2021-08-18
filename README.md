@@ -6,14 +6,17 @@
 /search -> 검색
 
 
-/users/edit -> 유저 수정
-/users/delete-> 유저 삭제
+/users/:id -> 유저 프로파일
+/user/logout -> 유저 로그아웃
+/user/edit -> edit my profile
+/users/delete-> 나의 유저 삭제
 
 
-/videos/watch -> 비디오 시청
-/videos/edit -> 비디오 수정
-/videos/delete ->비디오 삭제
-/videos/comment -> 댓글
-/videos/comment/delete -> 동영상 댓글의 삭제
+
+/videos/:id -> 비디오 시청
+/videos/:id/edit -> 비디오 수정
+/videos/upload -> 비디오 추가
+/videos/:id/delete ->비디오 삭제
+
 
 
