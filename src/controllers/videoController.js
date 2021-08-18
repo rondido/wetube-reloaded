@@ -1,4 +1,4 @@
-export const tranding = (req,res) => res.send("Home page videos");
+export const tranding = (req,res) => res.render("./src/home");
 export const see = (req,res) => {
     console.log(req.params);
     return  res.send(`watch video #${req.params.id}`);
