@@ -2,21 +2,17 @@ import Video from "../models/Video";
 
 
 /*
-console.log("start")
-Video.find({},(error,videos) => {
-    if(error){
-         return res.render("server-error");
-    }
-        return res.render("home", { pageTitle: "Home", videos: [] });
 
-}); <= call back 방식
-console.log("finished")
+  Video.find({},(error,videos) => {
+      return res.render("home", { pageTitle: "Home", videos: [] });
+    });  <= call back 방식
+
 */
 export const home = async(req,res) => {
-
-        const videos = await Video.find({});
-        return res.render("home", { pageTitle: "Home", videos: [] });
+    const videos = await Video.find({});
+    return res.render("home", {pageTitle: "Home", videos});
 };
+
 export const watch = (req, res) => {
   const { id } = req.params;
   return res.render("watch", { pageTitle: `Watching `  });
@@ -37,6 +33,17 @@ export const getUpload = (req,res) =>{
 
 export const postUpload =(req,res)=>{
     //이곳에서 비디오 배열을 추가 할 예정
-    const {title} = req.body;
+    const {title,description,hashtags} = req.body;
+    const video = new Video({
+        title,
+        description,
+        createdAt:Date.now(),
+        hashtags:hashtags.split(",").map(word => `#${word}`),
+        meta:{
+            views:0,
+            rating:0,
+        },
+    });
+    console.log(video);
     return res.redirect("/");
 };
